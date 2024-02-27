@@ -7,7 +7,7 @@ body{
 }
 #contenedor{
     width: 700px;
-    height: 600px;
+    height: 500px;
     text-align: center;
     /* Estas 3 lineas se encargan de centrar el div vertical y horizontalmente */
     position: absolute;
@@ -15,8 +15,8 @@ body{
     margin: auto;
     border: 100px;
     overflow: -moz-hidden-unscrollable;
-    box-shadow: 0 14px 28px #dbdbdb,
-    0 10px 10px #dbdbdb;
+    box-shadow: 0 10px 10px #dbdbdb,
+    0 15px 15px #dbdbdb;
 }
 #calculadora{
     background: white;
@@ -24,7 +24,7 @@ body{
     width: 50%;
     height: 100%;
     float: left;
-    color: 36bb6e
+    color: #36bb6e
 ;
 }
 
