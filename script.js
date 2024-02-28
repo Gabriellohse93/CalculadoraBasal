@@ -7,7 +7,9 @@ function calcular() {
     const FLU = document.getElementById("flu"); 
     const MAN = document.getElementById("man");
     const ERROR = document.getElementById("error");
-    
+    const VOL = document.getElementById("vol");
+
+    VOL.style.display = "none";
     FLU.style.display = "none";
     ERROR.style.display ="none";
     MAN.style.display = "none";
@@ -16,19 +18,22 @@ function calcular() {
         const VOLUMEN_DIARIO = hollidaySegar(peso)
         const MANTENIMIENTO = Math.round(VOLUMEN_DIARIO / 24);
         const MM2 = Math.round(MANTENIMIENTO * 1.5);
-       
+        
+        VOL.innerHTML = VOLUMEN_DIARIO + " CC ";
         FLU.innerHTML = MANTENIMIENTO + " CC/HR ";
         MAN.innerHTML = "M+M/2: " + MM2 + " CC/HR "
+        VOL.style.display = "block";
         FLU.style.display = "block";
         MAN.style.display = "block";
+    
     }
     else if(peso <= 0){
         ERROR.style.display = "block"
-       ERROR.innerHTML = "Datos Incorrectos"
+        ERROR.innerHTML = "Datos Incorrectos"
         input.value = "";
     } else if (input.value == ""){
         ERROR.style.display = "block"
-       ERROR.innerHTML = "Ingresar Datos"
+        ERROR.innerHTML = "Ingresar Datos"
         input.value = "";}
 
     else {
